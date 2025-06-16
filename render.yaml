@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: unifiedvms
+    env: python
+    buildCommand: pip install -r backend/unifiedvms_backend/requirements.txt
+    startCommand: python backend/unifiedvms_backend/app.py
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
